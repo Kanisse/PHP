@@ -1,0 +1,11 @@
+
+.carte {
+    background-color: aqua;
+    font-size: 30px;
+    width: 200px;
+    height: 80px;
+    padding: 20px;
+    box-shadow: 10px 0 0 0 blue;
+    border-radius: 20px;
+    margin-right: 40px;
+}
