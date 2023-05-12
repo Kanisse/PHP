@@ -2,10 +2,11 @@
 .carte {
     background-color: aqua;
     font-size: 20px;
-    width: 200px;
-    height: 100px;
+    width: 400px;
+    height: 200px;
     padding: 20px;
     box-shadow: 10px 0 0 0 blue;
     border-radius: 20px;
     margin-right: 40px;
+    text-align: center;
 }

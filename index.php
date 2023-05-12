@@ -14,22 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="display:flex;">
-    <div class="carte">
-        Chiffre d'affaire
-        X  &euro;
-    </div>
-    <div class="carte">
-        Nombre de commandes
-        Y 
-    </div>
-    <div class="carte">
-        Nombre de clients
-        Y 
-    </div>
-    
-    </div>
-    
+   
 
     <table class="table">
         <tr>
@@ -60,6 +45,21 @@
 
     </table>
 
-    <h2>  Le nombre de produits : <?php echo $ligne0['nbr']; ?> </h2> 
+    <div style="display:flex; margin:auto; width: 80%;">
+    <div class="carte">
+        Nombre de produits <br>
+        <?php echo $ligne0['nbr']; ?>
+    </div>
+    <div class="carte">
+        Nombre de commandes
+        Y 
+    </div>
+    <div class="carte">
+        Nombre de clients
+        Y 
+    </div>
+    
+    </div>
+ 
 </body>
 </html>
