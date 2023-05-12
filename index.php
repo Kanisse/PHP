@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,18 +22,11 @@
         Nombre de clients
         Y 
     </div>
-    <div class="carte">
-        Nombre de produits
-        Y 
-    </div>
-    <div class="carte">
-        la meilleur vente
-        Y 
-    </div>
+    
     </div>
     
 
-    <table>
+    <table class="table">
         <tr>
             <th> Nom </th>
             <th> Prix</th>
@@ -41,7 +35,9 @@
         </tr>
 
         <tr>
-            <td></td>
+            <td>HP</td>
+            <td>4000</td>
+            <td>Informatique</td>
         </tr>
     </table>
 </body>
