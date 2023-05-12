@@ -1,3 +1,10 @@
+<?php 
+
+$connexion = mysqli_connect("localhost","root","", "emginfo");
+$resultat = $connexion -> query("select * from produits");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
