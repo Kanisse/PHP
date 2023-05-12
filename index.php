@@ -1,7 +1,5 @@
 <?php 
 
-$connexion = mysqli_connect("localhost","root","", "emginfo");
-$resultat = $connexion -> query("select * from produits");
 
 ?>
 
@@ -42,14 +40,26 @@ $resultat = $connexion -> query("select * from produits");
         </tr>
 
 
-        <?php while ($ligne= $resultat -> fetch_array()) {?>
+        <?php 
+        $connexion = mysqli_connect("localhost","root","", "emginfo");
+        $resultat = $connexion -> query("select * from produits");
+        $nbr= $connexion -> query("select count('nom') as nbr from produits");
+        $ligne0= $nbr -> fetch_array();
+        while ($ligne= $resultat -> fetch_array()) {?>
         <tr>
             <td><?php echo $ligne['nom'] ; ?></td>
             <td><?php echo $ligne['prix'] ; ?></td>
             <td><?php echo $ligne['categorie'] ; ?></td>
+        <td> 
+            <button> Supprimer</button>
+            <button>Modifier</button>
+    </td>
+
         </tr>
 <?php  } ?>
 
     </table>
+
+    <h2>  Le nombre de produits : <?php echo $ligne0['nbr']; ?> </h2> 
 </body>
 </html>
