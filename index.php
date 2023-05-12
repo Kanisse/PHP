@@ -41,11 +41,15 @@ $resultat = $connexion -> query("select * from produits");
             <th> action</th>
         </tr>
 
+
+        <?php while ($ligne= $resultat -> fetch_array()) {?>
         <tr>
-            <td>HP</td>
-            <td>4000</td>
-            <td>Informatique</td>
+            <td><?php echo $ligne['nom'] ; ?></td>
+            <td><?php echo $ligne['prix'] ; ?></td>
+            <td><?php echo $ligne['categorie'] ; ?></td>
         </tr>
+<?php  } ?>
+
     </table>
 </body>
 </html>
