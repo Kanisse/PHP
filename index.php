@@ -1,7 +1,3 @@
-<?php 
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,10 +25,12 @@
         $resultat = $connexion -> query("select * from produits");
         $nbr= $connexion -> query("select count('nom') as nbr from produits");
         $ligne0= $nbr -> fetch_array();
+        $resultat2= $connexion -> query("select sum(price) as somme from produits");
+        $ligne1= $resultat2 -> fetch_array();
         while ($ligne= $resultat -> fetch_array()) {?>
         <tr>
             <td><?php echo $ligne['nom'] ; ?></td>
-            <td><?php echo $ligne['prix'] ; ?></td>
+            <td><?php echo $ligne['price'] ; ?></td>
             <td><?php echo $ligne['categorie'] ; ?></td>
         <td> 
             <button> Supprimer</button>
@@ -51,8 +48,8 @@
         <?php echo $ligne0['nbr']; ?>
     </div>
     <div class="carte">
-        Nombre de commandes
-        Y 
+        Somme des prix
+        <?php echo $ligne1['somme']; ?>
     </div>
     <div class="carte">
         Nombre de clients
